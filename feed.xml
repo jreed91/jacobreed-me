@@ -4,10 +4,10 @@
     <title>Stream-Of-Consciousness</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://jreed91.github.io/jacobreed/</link>
-    <atom:link href="http://jreed91.github.io/jacobreed/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 28 Sep 2014 11:47:36 -0500</pubDate>
-    <lastBuildDate>Sun, 28 Sep 2014 11:47:36 -0500</lastBuildDate>
+    <link>http://jreed91.github.io/</link>
+    <atom:link href="http://jreed91.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 28 Sep 2014 11:50:07 -0500</pubDate>
+    <lastBuildDate>Sun, 28 Sep 2014 11:50:07 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Sun, 28 Sep 2014 06:09:49 -0500</pubDate>
-        <link>http://jreed91.github.io/jacobreed/jekyll/update/2014/09/28/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://jreed91.github.io/jacobreed/jekyll/update/2014/09/28/welcome-to-jekyll.html</guid>
+        <link>http://jreed91.github.io/jekyll/update/2014/09/28/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://jreed91.github.io/jekyll/update/2014/09/28/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
