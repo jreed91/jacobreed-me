@@ -11,28 +11,17 @@ module.exports = (grunt) ->
 
   grunt.initConfig
 
-    copy:
-      jquery:
-        files: [{
-          expand: true
-          cwd: "bower_components/jquery/dist/"
-          src: "jquery.min.js"
-          dest: "vendor/js/"
-        }]
-      bootstrap:
-        files: [{
-          expand: true
-          cwd: "bower_components/bootstrap/dist/css/"
-          src: "bootstrap.min.css"
-          dest: "vendor/css/"
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          require: 'susy'
         },
-        {
-          expand: true
-          cwd: "bower_components/bootstrap/dist/js/"
-          src: "bootstrap.min.js"
-          dest: "vendor/js/"
-        }]
-
+        files: {
+            'css/style.css': '_sass/style.scss'
+        }
+      }
+    }
     exec:
       jekyll:
         cmd: "jekyll build --trace"
@@ -46,6 +35,7 @@ module.exports = (grunt) ->
           "_includes/**/*"
           "_layouts/**/*"
           "_posts/**/*"
+          "_sass/**/*"
           "css/**/*"
           "js/**/*"
           "_config.yml"
@@ -64,7 +54,6 @@ module.exports = (grunt) ->
           livereload: true
 
   grunt.registerTask "build", [
-    "copy"
     "exec:jekyll"
   ]
 
