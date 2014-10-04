@@ -265,6 +265,9 @@ input[type="submit"] {
   text-align: center;
   line-height: 2; }
 
+.home {
+  width: 100%; }
+
 @media screen and (min-width: 40em) {
   article {
     float: left;
@@ -272,7 +275,7 @@ input[type="submit"] {
     margin-right: 2.12766%;
     width: 65.95745%;
     margin-left: 17.02128%;
-    padding: 2.12766%; }
+    padding: 30px; }
     article:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 0px) and (max-width: 40em) {
@@ -282,6 +285,9 @@ input[type="submit"] {
     margin-right: 2.12766%;
     width: 82.97872%;
     margin-left: 8.51064%;
-    padding: 2.12766%; }
+    padding: 30px; }
     article:last-child {
       margin-right: 0; } }
+
+iframe {
+  width: 100%; }
