@@ -1,8 +1,13 @@
 GEM
   specs:
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
     bourbon (4.0.2)
       sass (~> 3.3)
       thor
+    jekyll-compose (0.0.0)
     neat (1.6.0)
       bourbon (>= 3.1)
       sass (>= 3.3)
@@ -13,4 +18,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
+  bourbon
+  jekyll-compose
   neat
