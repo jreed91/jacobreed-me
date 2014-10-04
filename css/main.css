@@ -272,12 +272,12 @@ article {
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 82.97872%;
-  margin-left: 8.51064%;
+  width: 65.95745%;
+  margin-left: 17.02128%;
   padding: 30px; }
   article:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 40em) and (max-width: 53.75em) {
     article {
       float: left;
       display: block;
