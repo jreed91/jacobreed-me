@@ -281,6 +281,7 @@ input[type="submit"] {
     display: block;
     margin-right: 2.12766%;
     width: 82.97872%;
-    margin-left: 8.51064%; }
+    margin-left: 8.51064%;
+    padding: 2.12766%; }
     article:last-child {
       margin-right: 0; } }
