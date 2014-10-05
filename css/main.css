@@ -65,6 +65,13 @@ h6 {
 .subheading {
   font-family: "Ovo"; }
 
+.header-post-title {
+  color: #fff;
+  text-shadow: 1px 1px 0px #969696; }
+
+.header-post-meta {
+  color: #DDD; }
+
 p {
   margin: 0 0 0.75em; }
 
@@ -269,11 +276,12 @@ input[type="submit"] {
   width: 100%; }
 
 article {
+  width: 100%;
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 65.95745%;
-  margin-left: 17.02128%;
+  width: 82.97872%;
+  margin-left: 8.51064%;
   padding: 30px; }
   article:last-child {
     margin-right: 0; }
@@ -297,6 +305,103 @@ article {
       padding: 5px; }
       article:last-child {
         margin-right: 0; } }
+  article img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
 iframe {
   width: 100%; }
+
+.pagination {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  display: inline-block;
+  text-align: center; }
+  .pagination:last-child {
+    margin-right: 0; }
+  .pagination .prev {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    float: left; }
+    .pagination .prev:last-child {
+      margin-right: 0; }
+  .pagination .next {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    float: right; }
+    .pagination .next:last-child {
+      margin-right: 0; }
+
+.fullpage {
+  padding: 0;
+  margin: 0 -8px 0 -8px;
+  text-align: center; }
+
+.header-img {
+  height: 500px;
+  width: 100%;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.header-post-title {
+  padding-top: 200px; }
+
+/* General button style (reset) */
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: white;
+  cursor: pointer;
+  padding: 15px 40px;
+  display: inline-block;
+  margin: 15px 15px;
+  letter-spacing: 1px;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.btn-4 {
+  border-radius: 50px;
+  border: 3px solid #DDD;
+  color: #DDD;
+  overflow: hidden; }
+
+.btn-4:active {
+  border-color: #17954c;
+  color: #17954c; }
+
+.btn-4:hover {
+  border-color: #477DCA; }
+
+.btn-4:before {
+  position: absolute;
+  height: 100%;
+  font-size: 125%;
+  line-height: 3.5;
+  color: #fff;
+  border-color: #DDD;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
