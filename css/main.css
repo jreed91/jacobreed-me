@@ -318,6 +318,14 @@ iframe {
     float: left; }
     .pagination .prev:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 0) and (max-width: 40em) {
+      .pagination .prev {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 40.42553%; }
+        .pagination .prev:last-child {
+          margin-right: 0; } }
   .pagination .next {
     float: left;
     display: block;
@@ -326,6 +334,15 @@ iframe {
     float: right; }
     .pagination .next:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 0) and (max-width: 40em) {
+      .pagination .next {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 40.42553%;
+        margin-left: 8.51064%; }
+        .pagination .next:last-child {
+          margin-right: 0; } }
 
 .fullpage {
   padding: 0;
@@ -508,10 +525,10 @@ a.symbol:before {
   padding-left: 5%; }
   @media screen and (min-width: 0) and (max-width: 40em) {
     .btn-4a {
-      padding-left: 3%; } }
+      padding-left: 15%; } }
 
 .btn-4b {
   padding-left: 5%; }
   @media screen and (min-width: 0) and (max-width: 40em) {
     .btn-4b {
-      padding-left: 3%; } }
+      padding-left: 15%; } }
