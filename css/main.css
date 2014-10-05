@@ -427,6 +427,10 @@ iframe {
         .post-footer .share .symbol {
           margin-left: -2%; } }
 
+.site-footer {
+  margin: 0 -8px 0 -8px;
+  background-color: #444; }
+
 .subheading {
   font-family: "Ovo"; }
 
@@ -489,6 +493,9 @@ a.symbol:before {
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
 
+.btn-4:hover {
+  border-color: #477DCA; }
+
 .btn:after {
   content: '';
   position: absolute;
@@ -496,6 +503,13 @@ a.symbol:before {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
+
+.disabled:hover {
+  color: #DDD;
+  border: 3px solid #DDD;
+  border-color: #DDD; }
+  .disabled:hover .btn-4:hover {
+    border-color: #DDD; }
 
 .btn-4 {
   border-radius: 50px;
@@ -506,9 +520,6 @@ a.symbol:before {
 .btn-4:active {
   border-color: #17954c;
   color: #17954c; }
-
-.btn-4:hover {
-  border-color: #477DCA; }
 
 .btn-4:before {
   position: absolute;
