@@ -62,16 +62,6 @@ h5 {
 h6 {
   font-size: 1em; }
 
-.subheading {
-  font-family: "Ovo"; }
-
-.header-post-title {
-  color: #fff;
-  text-shadow: 1px 1px 0px #969696; }
-
-.header-post-meta {
-  color: #DDD; }
-
 p {
   margin: 0 0 0.75em; }
 
@@ -355,6 +345,116 @@ iframe {
 
 .header-post-title {
   padding-top: 200px; }
+
+.post-footer {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  display: inline-block; }
+  .post-footer:last-child {
+    margin-right: 0; }
+  .post-footer .me {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    display: block; }
+    .post-footer .me:last-child {
+      margin-right: 0; }
+  .post-footer img {
+    width: 80px;
+    height: 100%;
+    border-radius: 100%; }
+  .post-footer .author-info {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 31.91489%;
+    margin-top: 2.5%; }
+    .post-footer .author-info:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 0px) and (max-width: 40em) {
+      .post-footer .author-info {
+        margin-top: 0; } }
+  .post-footer .share {
+    margin-right: 0;
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 23.40426%;
+    margin-left: 25.53191%;
+    margin-top: 2.5%; }
+    .post-footer .share:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 0px) and (max-width: 40em) {
+      .post-footer .share {
+        margin-top: 0;
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 40.42553%;
+        margin-left: 8.51064%; }
+        .post-footer .share:last-child {
+          margin-right: 0; }
+        .post-footer .share .symbol {
+          margin-left: -2%; } }
+    @media screen and (min-width: 40em) and (max-width: 53.75em) {
+      .post-footer .share {
+        margin-top: 0;
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 31.91489%;
+        margin-left: 17.02128%; }
+        .post-footer .share:last-child {
+          margin-right: 0; }
+        .post-footer .share .symbol {
+          margin-left: -2%; } }
+
+.subheading {
+  font-family: "Ovo"; }
+
+.header-post-title {
+  color: #fff;
+  text-shadow: 1px 1px 0px #969696; }
+
+.header-post-meta {
+  color: #DDD; }
+
+.post-footer h6 {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.66667em; }
+.post-footer .meta {
+  color: #444;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1em; }
+
+@font-face {
+  font-family: "Mono Social Icons Font";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/MonoSocialIconsFont-1.10.eot");
+  src: url("../fonts/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../fonts/MonoSocialIconsFont-1.10.woff") format("woff"), url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../fonts/MonoSocialIconsFont-1.10.svg#Mono Social Icons Font") format("svg"); }
+.symbol, a.symbol:before {
+  font-family: 'Mono Social Icons Font';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+a.symbol:before {
+  padding: 0;
+  content: attr(title);
+  font-size: 3.5em; }
 
 /* General button style (reset) */
 .btn {
