@@ -307,9 +307,7 @@ iframe {
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 100%;
-  display: inline-block;
-  text-align: center; }
+  width: 100%; }
   .pagination:last-child {
     margin-right: 0; }
   .pagination .prev {
@@ -505,3 +503,15 @@ a.symbol:before {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
+
+.btn-4a {
+  padding-left: 5%; }
+  @media screen and (min-width: 0) and (max-width: 40em) {
+    .btn-4a {
+      padding-left: 3%; } }
+
+.btn-4b {
+  padding-left: 5%; }
+  @media screen and (min-width: 0) and (max-width: 40em) {
+    .btn-4b {
+      padding-left: 3%; } }
