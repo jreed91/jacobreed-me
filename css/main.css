@@ -361,6 +361,9 @@ iframe {
 .header-post-title {
   padding-top: 200px; }
 
+.post-header {
+  padding-bottom: 2%; }
+
 .post-footer {
   float: left;
   display: block;
@@ -428,8 +431,23 @@ iframe {
           margin-left: -2%; } }
 
 .site-footer {
-  margin: 0 -8px 0 -8px;
-  background-color: #444; }
+  margin: 0 -8px -8px -8px;
+  background-color: #444;
+  color: #fff; }
+  .site-footer .rss-subscribe {
+    color: #fff;
+    text-align: center; }
+    .site-footer .rss-subscribe .subscribe {
+      margin-top: -20px;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .site-footer .rss-subscribe a {
+      display: inline-block;
+      padding: 2.12766%;
+      color: #fff; }
+    .site-footer .rss-subscribe a:hover {
+      color: #477DCA; }
 
 .subheading {
   font-family: "Ovo"; }
@@ -440,6 +458,9 @@ iframe {
 
 .header-post-meta {
   color: #DDD; }
+
+.post-meta {
+  color: #999; }
 
 .post-footer h6 {
   text-transform: uppercase;
