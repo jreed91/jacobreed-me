@@ -227,6 +227,10 @@ input[type="submit"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+article img {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in; }
+
 .container {
   max-width: 68em;
   margin-left: auto;
