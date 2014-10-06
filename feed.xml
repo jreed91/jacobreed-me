@@ -6,9 +6,20 @@
 </description>
     <link>http://jacobreed.me/</link>
     <atom:link href="http://jacobreed.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Oct 2014 19:22:56 -0500</pubDate>
-    <lastBuildDate>Sun, 05 Oct 2014 19:22:56 -0500</lastBuildDate>
+    <pubDate>Sun, 05 Oct 2014 19:31:39 -0500</pubDate>
+    <lastBuildDate>Sun, 05 Oct 2014 19:31:39 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Chimes - Hudson Mohawke</title>
+        <description>&lt;iframe src=&quot;https://embed.spotify.com/?uri=spotify:track:1U3oH5CRRcjT5TT69b6eYl&quot; width=&quot;640&quot; height=&quot;720&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Sun, 05 Oct 2014 00:00:00 -0500</pubDate>
+        <link>http://jacobreed.me/2014/10/05/Chimes.html</link>
+        <guid isPermaLink="true">http://jacobreed.me/2014/10/05/Chimes.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Voice Messages to Replace Texting</title>
@@ -187,19 +198,6 @@
         <link>http://jacobreed.me/2014/05/09/Atlanta.html</link>
         <guid isPermaLink="true">http://jacobreed.me/2014/05/09/Atlanta.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Christmas Photos</title>
-        <description>&lt;p&gt;&lt;img src=&quot;images/IMG_0039.jpg&quot; alt=&quot;Allie&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 24 Dec 2013 00:00:00 -0600</pubDate>
-        <link>http://jacobreed.me/2013/12/24/christmas-photos.html</link>
-        <guid isPermaLink="true">http://jacobreed.me/2013/12/24/christmas-photos.html</guid>
-        
-        
-        <category></category>
         
       </item>
     
