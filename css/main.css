@@ -351,9 +351,11 @@ iframe {
 .fullpage {
   padding: 0;
   margin: 0 -8px 0 -8px;
-  text-align: center; }
+  text-align: center;
+  padding: 20px 0 20px 0; }
 
 .header-img {
+  display: block;
   height: 500px;
   width: 100%;
   background: no-repeat center center;
@@ -362,7 +364,20 @@ iframe {
   -o-background-size: cover;
   background-size: cover; }
 
-.header-post-title {
+.gradient {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 500px;
+  background-image: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  /* W3C */
+  opacity: .6; }
+
+.header {
+  position: relative; }
+
+.post-title {
   padding-top: 200px; }
 
 .post-header {
@@ -453,15 +468,20 @@ iframe {
     .site-footer .rss-subscribe a:hover {
       color: #477DCA; }
 
+.title a {
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  color: #444; }
+.title a:hover {
+  color: #477DCA; }
+
 .subheading {
   font-family: "Ovo"; }
 
-.header-post-title {
+.header {
   color: #fff;
   text-shadow: 1px 1px 0px #969696; }
-
-.header-post-meta {
-  color: #DDD; }
 
 .post-meta {
   color: #999; }
