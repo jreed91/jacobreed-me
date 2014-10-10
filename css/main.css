@@ -26,7 +26,7 @@ input[type="submit"] {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: white;
+  background-color: #fbfbfb;
   color: #444;
   font-family: "Vollkorn", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1em;
@@ -276,7 +276,7 @@ article {
   margin-right: 2.12766%;
   width: 82.97872%;
   margin-left: 8.51064%;
-  padding: 30px; }
+  padding-top: 8%; }
   article:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) and (max-width: 53.75em) {
@@ -285,8 +285,7 @@ article {
       display: block;
       margin-right: 2.12766%;
       width: 82.97872%;
-      margin-left: 8.51064%;
-      padding: 30px; }
+      margin-left: 8.51064%; }
       article:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 0px) and (max-width: 40em) {
@@ -295,8 +294,7 @@ article {
       display: block;
       margin-right: 2.12766%;
       width: 82.97872%;
-      margin-left: 8.51064%;
-      padding: 5px; }
+      margin-left: 8.51064%; }
       article:last-child {
         margin-right: 0; } }
   article img {
@@ -374,10 +372,10 @@ iframe {
   /* W3C */
   opacity: .6; }
 
-.header {
+.header-post-title, .header {
   position: relative; }
 
-.post-title {
+.header-post-title {
   padding-top: 200px; }
 
 .post-header {
@@ -479,7 +477,7 @@ iframe {
 .subheading {
   font-family: "Ovo"; }
 
-.header {
+.fullpage {
   color: #fff;
   text-shadow: 1px 1px 0px #969696; }
 
