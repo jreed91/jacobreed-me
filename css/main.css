@@ -386,7 +386,8 @@ iframe {
   display: block;
   margin-right: 2.12766%;
   width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  padding-bottom: 20px; }
   .post-footer:last-child {
     margin-right: 0; }
   .post-footer .me {
