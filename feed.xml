@@ -6,9 +6,26 @@
 </description>
     <link>http://jacobreed.me/</link>
     <atom:link href="http://jacobreed.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 19 Oct 2014 19:36:33 -0500</pubDate>
-    <lastBuildDate>Sun, 19 Oct 2014 19:36:33 -0500</lastBuildDate>
+    <pubDate>Sat, 25 Oct 2014 18:36:54 -0500</pubDate>
+    <lastBuildDate>Sat, 25 Oct 2014 18:36:54 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How Verizon’s Advertising Header Works</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://webpolicy.org/2014/10/24/how-verizons-advertising-header-works/&quot;&gt;How Verizon’s Advertising Header Works&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In short, Verizon is packaging and selling subscriber information, acting as a data broker on real-time advertising exchanges.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Essentially what Verizon is doing is injecting a unique identifier into each request you make. Since this being done at the application layer, there is no way for you to block it. The only thing that blocks this is by using SSL or VPN. You can check to see if you’re being injected &lt;a href=&quot;http://uidh.crud.net&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Oct 2014 00:00:00 -0500</pubDate>
+        <link>http://jacobreed.me/2014/10/24/18-34-50.html</link>
+        <guid isPermaLink="true">http://jacobreed.me/2014/10/24/18-34-50.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Keeping Passwords Secure</title>
@@ -142,17 +159,6 @@
         <pubDate>Sun, 22 Jun 2014 00:00:00 -0500</pubDate>
         <link>http://jacobreed.me/2014/06/22/USA.html</link>
         <guid isPermaLink="true">http://jacobreed.me/2014/06/22/USA.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>The Beautiful Game</title>
-        <description>&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/iXyrQTcSmzY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-</description>
-        <pubDate>Thu, 12 Jun 2014 00:00:00 -0500</pubDate>
-        <link>http://jacobreed.me/2014/06/12/Beautiful-Game.html</link>
-        <guid isPermaLink="true">http://jacobreed.me/2014/06/12/Beautiful-Game.html</guid>
         
         
       </item>
