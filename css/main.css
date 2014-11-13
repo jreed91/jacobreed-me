@@ -506,15 +506,13 @@ iframe {
 html, body {
   height: 100%; }
 
-.content {
+.wrapper {
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -1em; }
+  margin: 0 auto -12em; }
 
-.footer, .push {
+.site-footer, .push {
   clear: both;
-  height: 1em; }
+  height: 12em; }
 
 .title a {
   -webkit-transition: all 0.6s ease-in-out;
