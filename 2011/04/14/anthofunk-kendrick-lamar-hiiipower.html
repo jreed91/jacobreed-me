@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <link rel="canonical" href="http://jacobreed.me/2011/04/14/anthofunk-kendrick-lamar-hiiipower.html">
+    
 </head>
 
 
@@ -47,8 +48,8 @@
 
     <div class="container">
   <header class="site-header">
-
     <div class="logo">
+    
     <a href="http://jacobreed.me" class="site-title sitelogo"><img src="/img/logo.png"></img></a>
     </div>
 
@@ -137,6 +138,10 @@
         
           
         
+          
+        
+          
+        
       </div>
     </nav> -->
 
@@ -144,7 +149,7 @@
 
 </div>
 
-
+  
     <div class="content">
         
 
@@ -183,10 +188,11 @@
 
 
     </div>
+    <div class="push"></div>
 
         <footer class="site-footer">
       <div class="container">
-        <div class="rss-subscribe" data-scroll-reveal="reset enter bottom and move 20px over 1.33s">
+        <div class="rss-subscribe" data-scroll-reveal="reset enter top and move 20px over 1.33s">
           <a class="symbol" title="rss" href="/feed.xml">
             <p class="subscribe">subscribe</p>
           </a>
@@ -197,10 +203,23 @@
             <p class="subscribe">Follow</p>
           </a>
         </div>
+        <div class="footer-links">
+          <a href="/archive.html">Archives</a> · <a href="http://jacobreed.me">Jacob Reed</a>
+        </div>
       </div>
     </footer>
 <script src="/js/scrollReveal.min.js"></script>
 <script src="/js/intense.min.js"></script>
+<script src="/js/jekyll-search.js"></script>
+<script type="text/javascript">
+    SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<li><span>{date}</span> - <a href="{url}" title="{desc}">{title}</a></li>',
+  noResultsText: '<h1>No Results Found</h1>',
+  dataSource: '/search.json'
+})
+</script>
 <script>
             window.scrollReveal = new scrollReveal();
           </script>
