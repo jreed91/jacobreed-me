@@ -524,6 +524,13 @@ html, body {
 .title a:hover {
   color: #477DCA; }
 
+a.post-permalink {
+  color: #999;
+  text-decoration: none; }
+
+a.post-permalink:hover {
+  color: #444; }
+
 .subheading {
   font-family: "Ovo"; }
 
