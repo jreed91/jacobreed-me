@@ -158,6 +158,24 @@
       <div class="post-header">
         <h2 class="post-title">
         
+          <a class="post-link" href="http://jreed91.tumblr.com/post/38245322418/cake-my-cousin-made-for-me-thats-filled-with">Cake my cousin made for me that&#8217;s filled with booze.</a> <a class="post-permalink" href="/2012/12/18/cake-my-cousin-made-for-me-thats-filled-with.html">&#8734;</a>
+        
+          
+
+        </h2>
+        <span class="post-meta">Dec 18, 2012</span>
+      </div>
+        <div class="post-content">
+        <p><img src="http://24.media.tumblr.com/57acd5ad71abecce3df6bd1e8d68e44b/tumblr_mf8u9piEYv1qi8pkco1_1280.jpg" alt="" /></p>
+
+
+        </div>
+    </article>
+    
+    <article class="post">
+      <div class="post-header">
+        <h2 class="post-title">
+        
           <a class="post-link" href="http://jreed91.tumblr.com/post/34756715180/morning">Morning</a> <a class="post-permalink" href="/2012/11/01/morning.html">&#8734;</a>
         
           
@@ -222,23 +240,6 @@
         <div class="post-content">
         <p><img src="http://25.media.tumblr.com/tumblr_mb4ps0MEGe1qi8pkco1_1280.jpg" alt="" /></p>
 
-
-        </div>
-    </article>
-    
-    <article class="post">
-      <div class="post-header">
-        <h2 class="post-title">
-        
-          <a class="post-link" href="http://jreed91.tumblr.com/post/31353989209/flesh-and-bone-the-killers">undefined</a> <a class="post-permalink" href="/2012/09/11/flesh-and-bone-the-killers.html">&#8734;</a>
-        
-          
-
-        </h2>
-        <span class="post-meta">Sep 11, 2012</span>
-      </div>
-        <div class="post-content">
-        
 
         </div>
     </article>
@@ -317,6 +318,148 @@
   ga('send', 'pageview');
 
 </script>
+    <script>
+      (function() {
+
+        // detect if IE : from http://stackoverflow.com/a/16657946    
+        var ie = (function(){
+          var undef,rv = -1; // Return value assumes failure.
+          var ua = window.navigator.userAgent;
+          var msie = ua.indexOf('MSIE ');
+          var trident = ua.indexOf('Trident/');
+
+          if (msie > 0) {
+            // IE 10 or older => return version number
+            rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+          } else if (trident > 0) {
+            // IE 11 (or newer) => return version number
+            var rvNum = ua.indexOf('rv:');
+            rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+          }
+
+          return ((rv > -1) ? rv : undef);
+        }());
+
+
+        // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179          
+        // left: 37, up: 38, right: 39, down: 40,
+        // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+        var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+        function preventDefault(e) {
+          e = e || window.event;
+          if (e.preventDefault)
+          e.preventDefault();
+          e.returnValue = false;  
+        }
+
+        function keydown(e) {
+          for (var i = keys.length; i--;) {
+            if (e.keyCode === keys[i]) {
+              preventDefault(e);
+              return;
+            }
+          }
+        }
+
+        function touchmove(e) {
+          preventDefault(e);
+        }
+
+        function wheel(e) {
+          // for IE 
+          //if( ie ) {
+            //preventDefault(e);
+          //}
+        }
+
+        function disable_scroll() {
+          window.onmousewheel = document.onmousewheel = wheel;
+          document.onkeydown = keydown;
+          document.body.ontouchmove = touchmove;
+        }
+
+        function enable_scroll() {
+          window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
+        }
+
+        var docElem = window.document.documentElement,
+          scrollVal,
+          isRevealed, 
+          noscroll, 
+          isAnimating,
+          container = document.getElementById( 'container' ),
+          trigger = container.querySelector( 'button.trigger' );
+
+        function scrollY() {
+          return window.pageYOffset || docElem.scrollTop;
+        }
+        
+        function scrollPage() {
+          scrollVal = scrollY();
+          
+          if( noscroll && !ie ) {
+            if( scrollVal < 0 ) return false;
+            // keep it that way
+            window.scrollTo( 0, 0 );
+          }
+
+          if( classie.has( container, 'notrans' ) ) {
+            classie.remove( container, 'notrans' );
+            return false;
+          }
+
+          if( isAnimating ) {
+            return false;
+          }
+          
+          if( scrollVal <= 0 && isRevealed ) {
+            toggle(0);
+          }
+          else if( scrollVal > 0 && !isRevealed ){
+            toggle(1);
+          }
+        }
+
+        function toggle( reveal ) {
+          isAnimating = true;
+          
+          if( reveal ) {
+            classie.add( container, 'modify' );
+          }
+          else {
+            noscroll = true;
+            disable_scroll();
+            classie.remove( container, 'modify' );
+          }
+
+          // simulating the end of the transition:
+          setTimeout( function() {
+            isRevealed = !isRevealed;
+            isAnimating = false;
+            if( reveal ) {
+              noscroll = false;
+              enable_scroll();
+            }
+          }, 600 );
+        }
+
+        // refreshing the page...
+        var pageScroll = scrollY();
+        noscroll = pageScroll === 0;
+        
+        disable_scroll();
+        
+        if( pageScroll ) {
+          isRevealed = true;
+          classie.add( container, 'notrans' );
+          classie.add( container, 'modify' );
+        }
+        
+        window.addEventListener( 'scroll', scrollPage );
+        trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+      })();
+    </script>
   </body>
 
 </html>
