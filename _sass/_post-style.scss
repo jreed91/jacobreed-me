@@ -1,0 +1,68 @@
+.title {
+  a {
+  @include transition (all .6s ease-in-out);
+  color: $dark-gray;
+  }  
+a:hover {
+  color: $blue;
+  }
+}
+a.post-permalink {
+  color: $medium-gray;
+  text-decoration: none;
+}
+a.post-permalink:hover {
+  color: $dark-gray;
+}
+.subheading {
+  font-family: $sub-heading-font-family;
+}
+.fullpage {
+  color: #fff;
+  font-family: $sans-serif;
+  span {
+      font-size: $base-font-size * 1.5;
+    }
+}
+.post-meta {
+	color: $medium-gray;
+}
+.post-footer {
+
+	h6 {
+		text-transform: uppercase;
+		color: $medium-gray;
+		font-size: $base-font-size / 1.5;
+	}
+	.meta {
+		color: $dark-gray;
+		font-family: $sans-serif;
+		font-weight: bold;
+		font-size: $base-font-size;
+	}
+	
+}
+
+
+@include font-face("Mono Social Icons Font", '../fonts/MonoSocialIconsFont-1.10');
+
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+	padding: 0;
+    content: attr(title);
+    font-size: $base-font-size * 3.5
+ 	}

@@ -6,6 +6,38 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:site" content="@jreed91">
+    <meta name="twitter:creator" content="@jreed91">
+    <meta name="twitter:description" content="{{site.description}}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:url" content="http://jacobreed.me/{{ page.url }}">
+    
+    {% if page.thumbnail %}
+    <meta name="twitter:image" content="{{ page.thumbnail }}">
+    <meta name="twitter:card" content="summary_large_image">
+    {% else %}
+    <meta name="twitter:card" content="summary">
+    {% endif %}
+
+
+    <!-- Facebook Tags -->
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{site.title}}"/>
+    <meta property="og:url" content="{{page.url}}"/>
+    <meta property="og:desciption" content="{{site.description}}"/>
+    {% if page.thumbnail %}
+    <meta property="og:image" content="{{page.thumbnail}}"/>
+    {% endif %}
+    
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    
 </head>

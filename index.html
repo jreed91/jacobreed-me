@@ -2,22 +2,46 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
+<div class="container">
+    <div class="post-list">
+    {% for post in paginator.posts %}
+    <article class="post">
+      <div class="post-header">
+        <h2 class="post-title">
+        {% if post.link %}
+          <a class="post-link" href="{{ post.link }}">{{ post.title }}</a> <a class="post-permalink" href="{{ post.url | prepend: site.baseurl }}">&#8734;</a>
+        {% else %}
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        {% endif %}
+          
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </div>
+        <div class="post-content">
+        {{ post.content }}
+        </div>
+    </article>
+    {% endfor %}
+  </div>
+
+
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a class="prev btn btn-4 btn-4b" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
+      {% else %}
+       <span class="disabled prev btn btn-4 btn-4b " href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</span>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <a class="next btn btn-4 btn-4a" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+      {% else %}
+        <a class="next btn btn-4 btn-4a disabled" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
 
 </div>
