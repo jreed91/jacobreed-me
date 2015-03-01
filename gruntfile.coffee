@@ -41,6 +41,7 @@ module.exports = (grunt) ->
           "_config.yml"
           "*.html"
           "*.md"
+          "_sass/*"
         ]
         tasks: [
           "exec:jekyll"
