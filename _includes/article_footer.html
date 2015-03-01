@@ -1,0 +1,17 @@
+<article class="post">
+	<div class="post-footer">
+	  	<img data-scroll-reveal="reset enter left and move 50px over 1.33s"  class="me" src="{{ "/img/me.jpg" | prepend: site.url }}" />
+	  	<div data-scroll-reveal="reset enter left and move 50px over 1.33s"  class="author-info">
+	  		<h6>Written By</h6>
+	  		<span class="meta">Jacob Reed</span>
+	  		<h6>Posted On</h6>
+	  		<span class="meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+	  	</div>
+	  	<div class="share">
+	  		<h6>Share</h6>
+	  		<a data-scroll-reveal="enter right and move 50px over 1s" href='http://twitter.com/home?status={{page.title}} via @jreed91 {{page.url | prepend: site.url}}' class='symbol' title='twitterbird'></a>
+	  		<a data-scroll-reveal="enter right and move 50px over 1s, after 0.3s" href='http://www.facebook.com/sharer/sharer.php?u={{page.url | prepend: site.url}}&t={{page.title}}' class='symbol' title='facebook'></a>
+	  		<a data-scroll-reveal="enter right and move 50px over 1s, after 0.6s" href='http://www.linkedin.com/shareArticle?mini=true&url={{page.url | prepend: site.url}}&title={{page.title}}&summary={{page.summary}}&source={{site.url}}' class='symbol' title='linkedin'></a>
+	  	</div>
+	</div>
+</article>

@@ -4,6 +4,7 @@ article {
   cursor: -moz-zoom-in;
 }
 }
+
 // Grid Layout
 .container {
 	@include outer-container;
@@ -69,7 +70,6 @@ article {
     @include fill-parent;
     @include span-columns(10);
     @include shift(1);
-    padding-top: 1%;  
 
     @include media(min-width $medium-screen max-width $large-screen){
     @include span-columns(10);
@@ -230,6 +230,11 @@ iframe {
     }
   }
   color: #fff;
+}
+.seperator {
+  margin: 3% 0 3% 0;
+  color: $light-gray;
+  text-align: center;
 }
 
 
