@@ -31,6 +31,7 @@ layout: default
 
 <!-- Pagination -->
 {% if paginator.total_pages > 1 %}
+<article class="post">
     <div class="pagination">
       {% if paginator.previous_page %}
         <a class="prev btn btn-4 btn-4b" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
@@ -44,6 +45,7 @@ layout: default
         <a class="next btn btn-4 btn-4a disabled" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
       {% endif %}
     </div>
+    </article>
     {% endif %}
 
 

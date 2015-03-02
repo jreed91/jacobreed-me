@@ -4,14 +4,15 @@ layout: default
 {% if page.header_img %}
 
 	{% include fullpage.html %}
-	<article class="post">
+	
 	<div class="container">
+	<article class="post">
 	  <div class="post-content">
 	    {{ content }}
 	  </div>
   	</article>
-  <hr>
-</div>
+ 	 <hr>
+	</div>
 
 {% else %}
 <div class="container">
@@ -20,7 +21,6 @@ layout: default
 	  <div class="post-content">
 	    {{ content }}
 	  </div>
-	  <hr>
   	</article>
 </div>
 {% endif %}
