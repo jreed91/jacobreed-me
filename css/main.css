@@ -671,7 +671,7 @@ table {
   cursor: pointer;
   padding: 15px 40px;
   display: inline-block;
-  margin: 15px 15px;
+  margin: 15px 5px;
   letter-spacing: 1px;
   outline: none;
   position: relative;
@@ -704,8 +704,8 @@ table {
   overflow: hidden; }
 
 .btn-4:active {
-  border-color: #17954c;
-  color: #17954c; }
+  border-color: #477DCA;
+  color: #477DCA; }
 
 .btn-4:before {
   position: absolute;
