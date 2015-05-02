@@ -275,31 +275,50 @@ article img {
       padding: 20px;
       background-color: white; }
 
-.site-header div.one-column {
+.site-header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 48.93617%; }
-  .site-header div.one-column:last-child {
+  width: 82.97872%;
+  margin-left: 8.51064%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: block; }
+  .site-header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .site-header:last-child {
     margin-right: 0; }
-  .site-header div.one-column.last {
-    margin-right: 0; }
-.site-header div.logo {
-  float: left;
-  display: block;
-  margin-right: 2.12766%;
-  width: 48.93617%;
-  width: 100%;
-  text-align: center; }
-  .site-header div.logo:last-child {
-    margin-right: 0; }
+  .site-header div.logo a:hover {
+    text-decoration: none; }
   .site-header div.logo img {
-    width: 15em;
-    padding: 2%; }
-.site-header div.title {
-  width: 100%;
-  text-align: center;
-  line-height: 2; }
+    width: 6em;
+    height: 6em;
+    float: left;
+    margin-right: 15px; }
+  .site-header a.brand {
+    width: 100%;
+    display: inline-block; }
+  .site-header div.title {
+    color: #444;
+    display: block;
+    line-height: 1.5;
+    margin-top: 27px; }
+  .site-header div.site-nav {
+    margin-top: 20px;
+    display: block;
+    padding: 10px;
+    border-top: 1px solid #e4e2e2;
+    border-bottom: 1px solid #e4e2e2; }
+    .site-header div.site-nav a.sub-nav2 {
+      margin-left: 30px; }
+  @media screen and (min-width: 0px) and (max-width: 40em) {
+    .site-header div.site-nav {
+      text-align: center; } }
 
 .home {
   width: 100%; }
@@ -511,6 +530,22 @@ iframe {
   margin: 3% 0 3% 0;
   color: #DDD;
   text-align: center; }
+
+.elsewhere {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 82.97872%;
+  margin-left: 8.51064%; }
+  .elsewhere:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .elsewhere:last-child {
+    margin-right: 0; }
 
 * {
   margin: 0; }
