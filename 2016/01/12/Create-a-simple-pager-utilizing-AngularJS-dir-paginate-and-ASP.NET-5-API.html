@@ -310,12 +310,15 @@ public PagedCollection&lt;Item&gt; Get(int? page, int? pageSize)
 &lt;/div&gt;
 </code></pre>
 
-<p>There’s a lot in this so let me go explain:
-1. The ViewData is a ASP.NET snippet that just sets the TItle of the page
-2. We then bootstrap our AngularJS app with an ng-app. I will show the code for this a bit.
-3. We then define the AngularJS controller for this page. This will control all the user actions
-4. Then utilizing the <a href="https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination#installation">dir-paginate module</a>, we create something similar to an ng-repeat. For each item print our the item.Name.
-4. We then add our dir-pagination controls.</p>
+<p>There’s a lot in this so let me go explain:</p>
+
+<ol>
+  <li>The ViewData is a ASP.NET snippet that just sets the TItle of the page</li>
+  <li>We then bootstrap our AngularJS app with an ng-app. I will show the code for this a bit.</li>
+  <li>We then define the AngularJS controller for this page. This will control all the user actions</li>
+  <li>Then utilizing the <a href="https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination#installation">dir-paginate module</a>, we create something similar to an ng-repeat. For each item print our the item.Name.</li>
+  <li>We then add our dir-pagination controls.</li>
+</ol>
 
 <p>Now we can add the app.js that wires all this up. Add an app folder insides the wwwroot folder. I just referenced what was created at the dir-paginate modules github page.</p>
 
