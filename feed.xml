@@ -6,13 +6,15 @@
 </description>
     <link>http://jacobreed.me//</link>
     <atom:link href="http://jacobreed.me//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Jan 2016 10:57:04 -0600</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2016 10:57:04 -0600</lastBuildDate>
+    <pubDate>Sun, 17 Jan 2016 11:02:23 -0600</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2016 11:02:23 -0600</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Create a simple pager utilizing AngularJS dir-paginate and ASP.NET 5 API</title>
         <description>&lt;p&gt;Today I’m going to walk you through how to build a simple server-side pager utilizing AngularJS, C#, and ASP.NET 5 on OS X. &lt;/p&gt;
+
+&lt;p&gt;View the finished code &lt;a href=&quot;https://github.com/jreed91/AngularJS-ASP.NET5-Pagination&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-set-up&quot;&gt;Getting Set Up&lt;/h2&gt;
 
