@@ -6,17 +6,296 @@
 </description>
     <link>jacobreed.me/</link>
     <atom:link href="jacobreed.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Jan 2016 16:25:16 -0600</pubDate>
-    <lastBuildDate>Sat, 16 Jan 2016 16:25:16 -0600</lastBuildDate>
+    <pubDate>Sun, 17 Jan 2016 10:52:56 -0600</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2016 10:52:56 -0600</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Create a simple pager utilizing AngularJS dir-paginate and ASP.NET 5 API</title>
-        <description>
+        <description>&lt;p&gt;Today I’m going to walk you through how to build a simple server-side pager utilizing AngularJS, C#, and ASP.NET 5 on OS X. &lt;/p&gt;
+
+&lt;h2 id=&quot;getting-set-up&quot;&gt;Getting Set Up&lt;/h2&gt;
+
+&lt;p&gt;I built this application utilizing the new cross-platform ASP.NET 5 on OS X. To get started we will need to set up your development environment on OS X.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow the set up instructions for OS X &lt;a href=&quot;https://docs.asp.net/en/latest/getting-started/installing-on-mac.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you have everything installed we’re going to start scaffolding our project. Navigate to the folder you want the files to live and &lt;a href=&quot;https://docs.asp.net/en/latest/client-side/yeoman.html&quot;&gt;follow these instructions&lt;/a&gt; on how to set up yeoman. &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;download-our-dependencies&quot;&gt;Download Our Dependencies&lt;/h2&gt;
+
+&lt;p&gt;You should now have a simple ASP.NET website structure set up. Now we need to get Angular.JS set up and other dependencies installed.&lt;/p&gt;
+
+&lt;p&gt;Make sure you have bower installed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g bower
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In my template I was missing a .bowerrc file, add this to the root of your directory and type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  	&quot;directory&quot;: &quot;wwwroot/lib&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will help make sure that all your bower dependencies are loading into the lib folder. &lt;/p&gt;
+
+&lt;p&gt;Now we can start adding our dependencies to the bower file.&lt;/p&gt;
+
+&lt;p&gt;Add this to our bower.json:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    &quot;name&quot;: &quot;ASP.NET&quot;,
+    &quot;private&quot;: true,
+    &quot;dependencies&quot;: {
+	    &quot;angular&quot;: &quot;1.4.8&quot;,
+	    &quot;bootstrap&quot;: &quot;3.3.5&quot;,
+	    &quot;jquery&quot;: &quot;2.1.4&quot;,
+	    &quot;jquery-validation&quot;: &quot;1.14.0&quot;,
+	    &quot;jquery-validation-unobtrusive&quot;: &quot;3.2.4&quot;,
+	    &quot;angularUtils-pagination&quot;: &quot;*&quot;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After saving, open up terminal in your directory and type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bower update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You now see all of our dependencies loaded into the lib folder.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-our-api&quot;&gt;Create Our API&lt;/h2&gt;
+
+&lt;p&gt;We can now start building our API. First start let’s build our Model. In the Models folder create a new class named Item.cs. Add the attributes you want to track, for simplicity here is mine:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;namespace angularjs_aspnet_paginate.Models
+{
+    public class Item
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We also need to create a model for the data we will return. Call this class PagedCollection.cs and add the following:&lt;/p&gt;
+
+&lt;p&gt;using System.Linq;
+using System.Collections.Generic;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;namespace angularjs_aspnet_paginate.Models
+{
+    public class PagedCollection&amp;lt;T&amp;gt;
+    {
+        public int Page { get; set; }
+
+        public int Count
+        {
+            get
+            {
+                return (null != this.Items) ? this.Items.Count() : 0;
+            }
+        }
+
+        public int TotalPages { get; set; }
+        public int TotalCount { get; set; }
+
+        public IEnumerable&amp;lt;T&amp;gt; Items { get; set; }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the data we will return from our API to our client. It includes the pagee number, a count of number of items, a count of total pages, total count of items overall, and the items. &lt;/p&gt;
+
+&lt;p&gt;Now that we have our models we can build our API. Create a new Controller: ItemsController.cs. Here is the relevant code for returning Items:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; // GET: api/paginate
+[HttpGet]
+public PagedCollection&amp;lt;Item&amp;gt; Get(int? page, int? pageSize)
+{
+    var currPage = page.GetValueOrDefault(0);
+    currPage = currPage - 1;
+    var currPageSize = pageSize.GetValueOrDefault(10);
+
+    var paged = _items.Skip(currPage * currPageSize)
+                        .Take(currPageSize)
+                        .ToArray();
+
+    var totalCount = _items.Count();
+
+    return new PagedCollection&amp;lt;Item&amp;gt;()
+    {
+        Page = currPage,
+        TotalCount = totalCount,
+        TotalPages = (int)Math.Ceiling((decimal)totalCount / currPageSize),
+        Items = paged
+    };
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This api takes a GET request with the current page and the page size (i.e. how many items should be displayed). We then use a linq query to get the data from _items based on the current page number and page size:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static ItemsController() {
+	_items = Enumerable.Range(1, 100)
+    	.Select(i =&amp;gt; new Item()
+        {
+            Id = i,
+            Name = &quot;Item &quot; + i.ToString()
+        }).ToArray();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We get our total count of items and return the PagedCollection model. After building out this structure open up terminal and type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dnx web
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you go to http://localhost:5000/api/items?page=1&amp;amp;pageSize=1, you should now be able to see the data being returned.&lt;/p&gt;
+
+&lt;h2 id=&quot;start-building-the-front-end&quot;&gt;Start Building the Front-End&lt;/h2&gt;
+
+&lt;p&gt;Now that we have our API built we can start building our front-end code. &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a new folder names Views&lt;/li&gt;
+  &lt;li&gt;Add two files _ViewStart.cshtml and _ViewImports.cshtml&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See the following code for these files:&lt;/p&gt;
+
+&lt;p&gt;_ViewStart.cshtml:
+	@{
+	    Layout = “_Layout”;
+	}&lt;/p&gt;
+
+&lt;p&gt;_ViewImports.cshtml:
+	@using angularjs_aspnet_paginate
+	@using angularjs_aspnet_paginate.Models&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add another folder with Views called Shared&lt;/li&gt;
+  &lt;li&gt;Add a file named _Layout.cshtml&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is the file that will load all of your client side html after _ViewStart.cshtml is called. I grabbed most of the code from Microsoft’s example &lt;a href=&quot;https://github.com/aspnet/Docs/blob/master/aspnet/client-side/angular/sample/AngularSample/src/AngularSample/Views/Shared/_Layout.cshtml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add another folder names Home inside Views&lt;/li&gt;
+  &lt;li&gt;Add a file named Index.cshtml. This is the file that will load once RenderBody() is called.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In order for all of this to work we need to add a HomeController to our ASP.NET code. Add HomeController.cs  under the Controllers folder:&lt;/p&gt;
+
+    &lt;p&gt;using Microsoft.AspNet.Mvc;&lt;/p&gt;
+
+    &lt;p&gt;namespace angularjs_aspnet_paginate.Controllers
+ {
+     public class HomeController : Controller {&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;      public IActionResult Index()
+        {
+             return View();
+        }
+ }  }
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is ust saying when I hit the home controller load my initial Index view. We also need to add the following code to our Startup.cs Configure method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;app.UseMvc(routes =&amp;gt;
+    {
+        routes.MapRoute(
+            name: &quot;default&quot;,
+            template: &quot;{controller=Home}/{action=Index}/{id?}&quot;);
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can now test the application to see the intial view load.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-our-angularjs-code&quot;&gt;Build our AngularJS code.&lt;/h2&gt;
+
+&lt;p&gt;Now open up Views/Home/Index.cshtml and build our boilerplate code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@{
+    ViewData[&quot;Title&quot;] = &quot;Home Page&quot;;
+}
+
+&amp;lt;div ng-app=&quot;paginationApp&quot;&amp;gt;
+    &amp;lt;div ng-controller=&quot;ItemsCtrl&quot;&amp;gt;  
+        &amp;lt;li dir-paginate=&quot;item in items | itemsPerPage: itemsPerPage&quot; total-items=&quot;totalItems&quot; current-page=&quot;pagination.current&quot;&amp;gt;
+            
+        &amp;lt;/li&amp;gt;
+        &amp;lt;dir-pagination-controls on-page-change=&quot;pageChanged(newPageNumber)&quot; template-url=&quot;lib/angularUtils-pagination/dirPagination.tpl.html&quot;&amp;gt;&amp;lt;/dir-pagination-controls&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There’s a lot in this so let me go explain:
+1. The ViewData is a ASP.NET snippet that just sets the TItle of the page
+2. We then bootstrap our AngularJS app with an ng-app. I will show the code for this a bit.
+3. We then define the AngularJS controller for this page. This will control all the user actions
+4. Then utilizing the &lt;a href=&quot;https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination#installation&quot;&gt;dir-paginate module&lt;/a&gt;, we create something similar to an ng-repeat. For each item print our the item.Name.
+4. We then add our dir-pagination controls.&lt;/p&gt;
+
+&lt;p&gt;Now we can add the app.js that wires all this up. Add an app folder insides the wwwroot folder. I just referenced what was created at the dir-paginate modules github page.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bootstrap our AngularJS app:
+ var paginationApp = angular.module(“paginationApp”, [“angularUtils.directives.dirPagination”]);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Define our controller, injecting in $scope and $http:
+ paginationApp.controller(‘ItemsCtrl’, function($scope, $http) {}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set up some initial variables:
+ $scope.items = [];
+ $scope.totalItems = 0;
+ $scope.itemsPerPage = 10;// this should match however many results your API puts on one page
+ getResultsPage(1);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Define our functions for handling the user interactions:
+ 	$scope.pagination = {
+    current: 1
+};&lt;/p&gt;
+
+    &lt;p&gt;$scope.pageChanged = function(newPage) {
+    getResultsPage(newPage);
+};&lt;/p&gt;
+
+    &lt;p&gt;function getResultsPage(pageNumber) {
+    // this is just an example, in reality this stuff should be in a service
+    $http.get(‘api/items?page=’ + pageNumber + ‘&amp;amp;pageSize=’ + $scope.itemsPerPage)
+        .then(function(result) {
+            console.log(result);
+            $scope.items = result.data.Items;
+            $scope.totalItems = result.data.TotalCount
+        });
+}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You should now have a working AngularJS server-side pagination with an ASP.NET API. &lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;mizrael/AngularJs-Pagination&quot;&gt;https://github.com/mizrael/AngularJs-Pagination/tree/master/DemoAngularPagination&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.asp.net/en/latest/&quot;&gt;ASP.NET Docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mizrael/AngularJs-Pagination&quot;&gt;Dir-Paginate Module&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2016/01/12/Testing-Post-To-Medium.html</link>
-        <guid isPermaLink="true">jacobreed.me/2016/01/12/Testing-Post-To-Medium.html</guid>
+        <link>jacobreed.me/2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</link>
+        <guid isPermaLink="true">jacobreed.me/2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</guid>
         
         
       </item>
