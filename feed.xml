@@ -4,10 +4,10 @@
     <title>Stream-Of-Consciousness</title>
     <description>A daily stream of content from the mind of Jacob Reed.
 </description>
-    <link>jacobreed.me/</link>
-    <atom:link href="jacobreed.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Jan 2016 10:55:04 -0600</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2016 10:55:04 -0600</lastBuildDate>
+    <link>http://jacobreed.me//</link>
+    <atom:link href="http://jacobreed.me//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 17 Jan 2016 10:57:04 -0600</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2016 10:57:04 -0600</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -297,8 +297,8 @@ public PagedCollection&amp;lt;Item&amp;gt; Get(int? page, int? pageSize)
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</link>
-        <guid isPermaLink="true">jacobreed.me/2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</guid>
+        <link>http://jacobreed.me//2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2016/01/12/Create-a-simple-pager-utilizing-AngularJS-dir-paginate-and-ASP.NET-5-API.html</guid>
         
         
       </item>
@@ -309,8 +309,8 @@ public PagedCollection&amp;lt;Item&amp;gt; Get(int? page, int? pageSize)
 
 </description>
         <pubDate>Sun, 21 Jun 2015 00:00:00 -0500</pubDate>
-        <link>jacobreed.me/2015/06/21/Happy-Fathers-Day.html</link>
-        <guid isPermaLink="true">jacobreed.me/2015/06/21/Happy-Fathers-Day.html</guid>
+        <link>http://jacobreed.me//2015/06/21/Happy-Fathers-Day.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2015/06/21/Happy-Fathers-Day.html</guid>
         
         
       </item>
@@ -376,8 +376,8 @@ public PagedCollection&amp;lt;Item&amp;gt; Get(int? page, int? pageSize)
 
 </description>
         <pubDate>Wed, 04 Feb 2015 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2015/02/04/1-Year-Ago.html</link>
-        <guid isPermaLink="true">jacobreed.me/2015/02/04/1-Year-Ago.html</guid>
+        <link>http://jacobreed.me//2015/02/04/1-Year-Ago.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2015/02/04/1-Year-Ago.html</guid>
         
         
       </item>
@@ -407,8 +407,8 @@ test&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 03 Jan 2015 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2015/01/03/How-The-Name-Adidas-Came-To-Be.html</link>
-        <guid isPermaLink="true">jacobreed.me/2015/01/03/How-The-Name-Adidas-Came-To-Be.html</guid>
+        <link>http://jacobreed.me//2015/01/03/How-The-Name-Adidas-Came-To-Be.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2015/01/03/How-The-Name-Adidas-Came-To-Be.html</guid>
         
         
       </item>
@@ -432,8 +432,8 @@ test&lt;/p&gt;
 &lt;p&gt;Targeted therapies are expensive and not everyone has insurance that can cover these drugs. In order to continue this trend, these drugs need to be available to everyone no matter the income level.&lt;/p&gt;
 </description>
         <pubDate>Thu, 01 Jan 2015 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2015/01/01/US-Cancer-Deaths-fall.html</link>
-        <guid isPermaLink="true">jacobreed.me/2015/01/01/US-Cancer-Deaths-fall.html</guid>
+        <link>http://jacobreed.me//2015/01/01/US-Cancer-Deaths-fall.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2015/01/01/US-Cancer-Deaths-fall.html</guid>
         
         
       </item>
@@ -459,8 +459,8 @@ test&lt;/p&gt;
 &lt;p&gt;I’d love to see some statistics on how much the enterprise is spending on security over the past few years. From personal experience, I know it’s the top priority for many executives. &lt;/p&gt;
 </description>
         <pubDate>Thu, 01 Jan 2015 00:00:00 -0600</pubDate>
-        <link>jacobreed.me/2015/01/01/Past-and-Present.html</link>
-        <guid isPermaLink="true">jacobreed.me/2015/01/01/Past-and-Present.html</guid>
+        <link>http://jacobreed.me//2015/01/01/Past-and-Present.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2015/01/01/Past-and-Present.html</guid>
         
         
       </item>
@@ -476,8 +476,8 @@ test&lt;/p&gt;
 &lt;p&gt;Essentially what Verizon is doing is injecting a unique identifier into each request you make. Since this being done at the application layer, there is no way for you to block it. The only thing that blocks this is by using SSL or VPN. You can check to see if you’re being injected &lt;a href=&quot;http://uidh.crud.net&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Oct 2014 00:00:00 -0500</pubDate>
-        <link>jacobreed.me/2014/10/24/18-34-50.html</link>
-        <guid isPermaLink="true">jacobreed.me/2014/10/24/18-34-50.html</guid>
+        <link>http://jacobreed.me//2014/10/24/18-34-50.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2014/10/24/18-34-50.html</guid>
         
         
       </item>
@@ -493,8 +493,8 @@ test&lt;/p&gt;
 &lt;p&gt;This is a great idea. Rather than being reactive Facebook is being proactive in notifying their users. Hopefully we can see more companies taking these types of measures. &lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Oct 2014 00:00:00 -0500</pubDate>
-        <link>jacobreed.me/2014/10/19/Keeping_Passwords_Secure.html</link>
-        <guid isPermaLink="true">jacobreed.me/2014/10/19/Keeping_Passwords_Secure.html</guid>
+        <link>http://jacobreed.me//2014/10/19/Keeping_Passwords_Secure.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2014/10/19/Keeping_Passwords_Secure.html</guid>
         
         
       </item>
@@ -508,8 +508,8 @@ test&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Fri, 17 Oct 2014 00:00:00 -0500</pubDate>
-        <link>jacobreed.me/2014/10/17/How-Text-Messages-Change-from-Dating-to-Marriage.html</link>
-        <guid isPermaLink="true">jacobreed.me/2014/10/17/How-Text-Messages-Change-from-Dating-to-Marriage.html</guid>
+        <link>http://jacobreed.me//2014/10/17/How-Text-Messages-Change-from-Dating-to-Marriage.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2014/10/17/How-Text-Messages-Change-from-Dating-to-Marriage.html</guid>
         
         
       </item>
@@ -519,8 +519,8 @@ test&lt;/p&gt;
         <description>&lt;iframe src=&quot;https://embed.spotify.com/?uri=spotify:track:1U3oH5CRRcjT5TT69b6eYl&quot; width=&quot;640&quot; height=&quot;720&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Sun, 05 Oct 2014 00:00:00 -0500</pubDate>
-        <link>jacobreed.me/2014/10/05/Chimes.html</link>
-        <guid isPermaLink="true">jacobreed.me/2014/10/05/Chimes.html</guid>
+        <link>http://jacobreed.me//2014/10/05/Chimes.html</link>
+        <guid isPermaLink="true">http://jacobreed.me//2014/10/05/Chimes.html</guid>
         
         
       </item>
