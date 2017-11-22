@@ -1,5 +1,3 @@
-source "https://rubygems.org"
-
 GEM
   specs:
     bitters (0.10.1)
