@@ -1,3 +1,5 @@
+gem "jekyll"
+
 GEM
   specs:
     bitters (0.10.1)
